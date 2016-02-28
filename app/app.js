@@ -6,12 +6,14 @@ require('angular-route');
 require('./views/home');
 require('./views/projects');
 require('./views/me');
+require('./views/impressum');
 
 angular.module('hansi', [
         'ngRoute',
         'hansi.home',
         'hansi.projects',
-        'hansi.me'
+        'hansi.me',
+        'hansi.impressum'
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
