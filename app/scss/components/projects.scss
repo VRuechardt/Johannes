@@ -1,0 +1,30 @@
+.projects--title{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-size: 24pt;
+    border-left: 1px solid $secondary-color;
+    border-bottom: 1px solid $secondary-color;
+    width: 20vw;
+    animation-name: dropping-title;
+    animation-duration: 2s;
+}
+
+@keyframes dropping-title{
+    from{top: -115px};
+    to{top: 0};
+}
+.projects--cards-wrapper{
+    margin-top: 8vw;
+    .card{
+        background: none;
+    }
+    .card-image{
+        background: none;
+    }
+    .card-content{
+        color: black;
+        background-color:white;
+    }
+}
