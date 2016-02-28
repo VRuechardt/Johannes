@@ -36,10 +36,14 @@
   top: 100vh;
   left: 0;
   right: 0;
-  height: 100vh;
   background: #fdfdfd;
   color: black !important;
   padding-top: 100px;
+
+  .page-footer {
+    margin-top: 100px;
+  }
+
 }
 
 .splash-text {
@@ -73,6 +77,9 @@
 
   .home--content-box {
     padding-top: 20px;
+    .page-footer {
+      margin-top: 20px;
+    }
   }
 
 }
