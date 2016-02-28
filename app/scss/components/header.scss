@@ -2,4 +2,43 @@
 nav {
   background: none;
   color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px !important;
+  z-index: 10;
+
+  .container {
+    border-bottom: 0.5px solid white;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 500px;
+      bottom: -1px;
+      border-bottom: 0.5px solid white;
+    }
+
+  }
+
+  .button {
+
+    padding: 0 20px;
+    height: 64px;
+    cursor: pointer;
+    transition: background 0.5s;
+    background: rgba(0, 0, 0, 0);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+  }
+
+  .active {
+    color: $secondary-color;
+  }
+
 }

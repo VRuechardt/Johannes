@@ -9,7 +9,28 @@
 </head>
 <body ng-app="hansi" ng-cloak>
 
+    <nav class="z-depth-0">
+        <div class="container">
+            Johannes Straka
 
+            <a href="#/me">
+                <div class="button right">
+                    Me
+                </div>
+            </a>
+            <a href="#/projects">
+                <div class="button right">
+                    Projects
+                </div>
+            </a>
+            <a href="#/" ng-class="{active: page == 'home'}">
+                <div class="button right">
+                    Home
+                </div>
+            </a>
+
+        </div>
+    </nav>
 
     <div ng-view></div>
 
