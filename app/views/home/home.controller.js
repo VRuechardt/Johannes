@@ -31,6 +31,12 @@ module.exports = ['$scope', '$rootScope', function($scope, $rootScope) {
 
     };
 
+    $scope.scrollDownOnePage = function() {
+
+        $("html, body").animate({ scrollTop: $(window).height() - 63}, 600);
+
+    };
+
     window.addEventListener('scroll', $scope.scrollHandler);
 
     $scope.$on('$locationChangeStart', function( event ) {

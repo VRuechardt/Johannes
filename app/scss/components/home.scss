@@ -20,6 +20,11 @@
   right: 0;
   height: 100vh;
   color: white;
+  i {
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: 80px;
+  }
 }
 
 .home--content-box {
