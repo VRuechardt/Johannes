@@ -40,6 +40,19 @@
                 </div>
             </a>
 
+            <a data-activates="mobile-demo" class="button-collapse right clickable"><i class="material-icons">menu</i></a>
+            <ul class="side-nav right" id="mobile-demo">
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+                <li>
+                    <a href="#/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#/me">Me</a>
+                </li>
+            </ul>
+
             <div style="clear: both;"></div>
 
         </div>
@@ -51,5 +64,8 @@
     <script type="text/javascript" src="dest/app.js"></script>
     <script src="bower_components/Materialize/dist/js/materialize.min.js" type="text/javascript"></script>
     <script src="bower_components/angular-materialize/js/app.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".button-collapse").sideNav();
+    </script>
 </body>
 </html>

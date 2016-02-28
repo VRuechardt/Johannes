@@ -8,6 +8,8 @@
   height: 100vh;
   background-image: url(../img/Hintergrund_Home_a.jpg);
   background-position: right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 .fullpage-parallax-text {
@@ -17,4 +19,34 @@
   right: 0;
   height: 100vh;
   color: white;
+}
+
+.splash-text {
+
+  .title {
+    font-size: 36pt;
+  }
+
+  max-width: 70%;
+  font-size: 24pt;
+  font-weight: 300;
+  margin: 20vh 0 0 0;
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .splash-text {
+
+    .title {
+      font-size: 24pt;
+    }
+
+    max-width: 70%;
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 20vh 0 0 0;
+
+  }
+
 }

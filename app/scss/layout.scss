@@ -6,3 +6,11 @@ body {
 .larger-font {
   font-size: 20pt;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+#sidenav-overlay {
+  z-index: 1;
+}
