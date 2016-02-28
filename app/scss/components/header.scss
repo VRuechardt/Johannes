@@ -81,6 +81,13 @@ nav {
     .active .button {
        color: $secondary-color !important;
      }
+
+    p {
+      span.small-span {
+        color: $type-on-white-secondary;
+      }
+    }
+
   }
 
   .active {
