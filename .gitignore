@@ -1,0 +1,7 @@
+
+
+.idea
+*.log
+app/dest
+node_modules
+app/bower_components
