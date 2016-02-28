@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ['$scope', '$rootScope', function($scope, $rootScope) {
+module.exports = ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
 
     $rootScope.page = 'home';
 
@@ -42,5 +42,12 @@ module.exports = ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.$on('$locationChangeStart', function( event ) {
         window.removeEventListener('scroll', $scope.scrollHandler);
     });
+
+    $scope.projects = function() {
+        $location.url('projects');
+    };
+    $scope.me = function() {
+        $location.url('me');
+    };
 
 }];
