@@ -1,0 +1,19 @@
+
+///// COLOR
+
+$primary-color: #4d4845;
+$primary-color-light: #dbdada;
+$primary-color-dark: #33302e;
+
+$secondary-color: #FFC107;
+
+
+///// FONT
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
+
+html, body {
+  font-family: 'Open Sans';
+  background: black;
+  font-size: 12pt;
+}
