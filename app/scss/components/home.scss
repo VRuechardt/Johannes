@@ -13,6 +13,20 @@
 
 }
 
+body .fullpage-parallax {
+  transition: all 0.5s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+body:hover .fullpage-parallax {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+@media screen and (max-width: 600px) {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
 .fullpage-parallax-text {
   position: absolute;
   top: 64px;
