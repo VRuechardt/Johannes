@@ -8,6 +8,7 @@ nav {
   top: 0;
   height: 64px !important;
   z-index: 10;
+  transition: all 0.5s;
 
   p {
     margin: 0;
@@ -21,6 +22,7 @@ nav {
     span.small-span {
       line-height: 10px;
       font-size: 10pt;
+      color: $type-on-white-secondary;
     }
   }
 

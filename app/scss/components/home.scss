@@ -24,6 +24,10 @@
     position: absolute;
     left: calc(50% - 30px);
     bottom: 80px;
+    color: $type-on-white-secondary;
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }
 
@@ -41,12 +45,14 @@
 
   .title {
     font-size: 24pt;
+    color: white;
   }
 
-  max-width: 70%;
+  max-width: 60%;
   font-size: 14.5pt;
   font-weight: 300;
   margin: 20vh 0 0 0;
+  color: $type-on-white-secondary;
 
 }
 
