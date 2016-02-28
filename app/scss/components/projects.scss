@@ -4,6 +4,7 @@
     padding-bottom: 10px;
     padding-left: 15px;
     font-size: 24pt;
+    font-weight: 300 !important;
     border-left: 1px solid $secondary-color;
     border-bottom: 1px solid $secondary-color;
     width: 20vw;
@@ -12,8 +13,8 @@
 }
 
 @keyframes dropping-title{
-    from{top: -115px};
-    to{top: 0};
+    from{top: -115px}
+    to{top: 0}
 }
 .projects--cards-wrapper{
     margin-top: 8vw;
