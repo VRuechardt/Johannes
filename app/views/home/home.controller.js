@@ -43,6 +43,9 @@ module.exports = ['$scope', '$rootScope', '$location', function($scope, $rootSco
 
     $scope.$on('$locationChangeStart', function( event ) {
         window.removeEventListener('scroll', $scope.scrollHandler);
+        $('nav').toggleClass('reversed', false);
+        $('nav').toggleClass('z-depth-1', false);
+        $('nav').toggleClass('z-depth-0', true);
     });
 
     $scope.projects = function() {
