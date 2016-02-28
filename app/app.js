@@ -6,6 +6,7 @@ require('angular-route');
 require('./views/home');
 require('./views/projects');
 require('./views/me');
+require('./views/impressum');
 require('./directives/footer');
 
 angular.module('hansi', [
@@ -13,6 +14,7 @@ angular.module('hansi', [
         'hansi.home',
         'hansi.projects',
         'hansi.me',
+        'hansi.impressum',
         'hansi.footer'
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider) {
