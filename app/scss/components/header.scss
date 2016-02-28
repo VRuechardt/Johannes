@@ -95,6 +95,10 @@ nav {
     display: none;
   }
 
+  nav .small-span {
+    color: $type-on-white-secondary !important;
+  }
+
   nav .container:after {
     content: "";
     position: absolute;

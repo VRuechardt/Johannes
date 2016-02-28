@@ -4,7 +4,7 @@ module.exports = ['$scope', '$rootScope', '$location', function($scope, $rootSco
 
     $rootScope.page = 'home';
 
-    $scope.scrollHandler = function(e) {
+    $scope.scrollHandler = function() {
 
         var scrollY = window.scrollY;
         var opacity = 1 - Math.min(1, window.scrollY / 200);
@@ -30,6 +30,8 @@ module.exports = ['$scope', '$rootScope', '$location', function($scope, $rootSco
         $('nav').toggleClass('z-depth-0', (scrollY + 64) <= window.innerHeight);
 
     };
+
+    $scope.scrollHandler();
 
     $scope.scrollDownOnePage = function() {
 
