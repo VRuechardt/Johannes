@@ -19,4 +19,23 @@ angular.module('hansi', [
     ])
     .config(['$routeProvider', '$locationProvider', function($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
+    }])
+    .directive("showOnceBackgroundLoaded", [function () {
+        return {
+            restrict: "A",
+            scope: false,
+            link: function (scope, element, attributes) {
+                element.addClass("ng-hide");
+                var image = new Image();
+                image.onload = function () {
+                    // the image must have been cached by the browser, so it should load quickly
+                    scope.$apply(function () {
+                        element.css({ backgroundImage: 'url("' + attributes.showOnceBackgroundLoaded + '")' });
+                        $(element).fadeIn();
+                        element.removeClass("ng-hide");
+                    });
+                };
+                image.src = attributes.showOnceBackgroundLoaded;
+            }
+        };
     }]);

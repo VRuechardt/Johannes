@@ -8,58 +8,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
 </head>
-<body ng-app="hansi" ng-cloak>
+<body ng-app="hansi">
 
-    <nav class="z-depth-0">
-        <div class="container">
+    <div ng-cloak>
 
-            <p class="left">
-                <span class="larger-font">
-                    Johannes Straka
-                </span>
-                    <br>
-                <span class="small-span">
-                    Industrial Design | Illustration
-                </span>
-            </p>
+        <nav class="z-depth-0">
+            <div class="container">
+
+                <p class="left">
+                    <span class="larger-font">
+                        Johannes Straka
+                    </span>
+                        <br>
+                    <span class="small-span">
+                        Industrial Design | Illustration
+                    </span>
+                </p>
 
 
 
-            <a href="#/me" ng-class="{active: page == 'me'}">
-                <div class="button right">
-                    Me
-                </div>
-            </a>
-            <a href="#/projects" ng-class="{active: page == 'projects'}">
-                <div class="button right">
-                    Projects
-                </div>
-            </a>
-            <a href="#/" ng-class="{active: page == 'home'}">
-                <div class="button right">
-                    Home
-                </div>
-            </a>
+                <a href="#/me" ng-class="{active: page == 'me'}">
+                    <div class="button right">
+                        Me
+                    </div>
+                </a>
+                <a href="#/projects" ng-class="{active: page == 'projects'}">
+                    <div class="button right">
+                        Projects
+                    </div>
+                </a>
+                <a href="#/" ng-class="{active: page == 'home'}">
+                    <div class="button right">
+                        Home
+                    </div>
+                </a>
 
-            <a data-activates="mobile-demo" class="button-collapse right clickable"><i class="material-icons">menu</i></a>
-            <ul class="side-nav right" id="mobile-demo">
-                <li>
-                    <a href="#/">Home</a>
-                </li>
-                <li>
-                    <a href="#/projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#/me">Me</a>
-                </li>
-            </ul>
+                <a data-activates="mobile-demo" class="button-collapse right clickable"><i class="material-icons">menu</i></a>
+                <ul class="side-nav right" id="mobile-demo">
+                    <li>
+                        <a href="#/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#/projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#/me">Me</a>
+                    </li>
+                </ul>
 
-            <div style="clear: both;"></div>
+                <div style="clear: both;"></div>
 
-        </div>
-    </nav>
+            </div>
+        </nav>
 
-    <div ng-view></div>
+        <div ng-view></div>
+
+    </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="dest/app.js"></script>
