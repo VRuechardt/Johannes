@@ -1,7 +1,14 @@
 
-.page-footer {
+.custom-footer {
 
-  padding-bottom: 20px;
+  background: $footer-bg-color;
+  padding-top: 1px;
+  margin-top: 100px;
+  position: relative;
+
+  .row {
+    margin-bottom: 0;
+  }
 
   .container {
     border-top: 0.5px solid $secondary-color;
@@ -13,11 +20,31 @@
     font-size: 10pt;
 
     p {
+      margin: 0;
       height: 64px;
       line-height: 64px;
-      color: $type-on-white-secondary;
-      &:hover {
-        color: $secondary-color;
+      color: $type-on-black-secondary;
+
+      span {
+        display: inline-block;
+        transition: background 0.5s;
+      }
+
+      span a {
+        color: $type-on-black-secondary;
+        padding: 0 20px;
+      }
+
+      span:hover {
+        a {
+          color: $secondary-color;
+        }
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .code-by {
+        color: $type-on-black-secondary;
+        background: none !important;
       }
     }
 
@@ -34,9 +61,26 @@
 
 }
 
+
+@media screen and (max-width: 992px) {
+
+  .custom-footer {
+    margin-top: 0px;
+  }
+
+}
+
 @media screen and (max-width: 600px) {
 
-  .page-footer .container:after {
+  .custom-footer .container {
+    margin-top: 20px;
+  }
+
+  .custom-footer .container p span a {
+    padding: 0 5px;
+  }
+
+  .custom-footer .container:after {
     content: "";
     position: absolute;
     left: -500px;

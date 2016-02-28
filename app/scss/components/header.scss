@@ -22,7 +22,7 @@ nav {
     span.small-span {
       line-height: 10px;
       font-size: 10pt;
-      color: $type-on-white-secondary;
+      color: $type-on-black-secondary;
     }
   }
 
@@ -67,6 +67,10 @@ nav {
     }
     .container {
       border-bottom: none !important;
+    }
+
+    i {
+      color: $type-on-white-primary;
     }
 
     background: #fefdfd !important;
