@@ -6,10 +6,11 @@
   right: 0;
   top: 0;
   height: 100vh;
-  background-image: url(../img/Hintergrund_Home_a.jpg);
+  background-image: url(../img/Hintergrund_Home_b.jpg);
   background-position: right;
   background-size: auto 100%;
   background-repeat: no-repeat;
+
 }
 
 .fullpage-parallax-text {
@@ -21,14 +22,24 @@
   color: white;
 }
 
+.home--content-box {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: #fdfdfd;
+  color: black !important;
+}
+
 .splash-text {
 
   .title {
-    font-size: 36pt;
+    font-size: 24pt;
   }
 
   max-width: 70%;
-  font-size: 24pt;
+  font-size: 14.5pt;
   font-weight: 300;
   margin: 20vh 0 0 0;
 
@@ -36,17 +47,24 @@
 
 @media screen and (max-width: 992px) {
 
+  .fullpage-parallax {
+    right: -100px;
+  }
+
   .splash-text {
 
-    .title {
-      font-size: 24pt;
-    }
-
     max-width: 70%;
-    font-size: 12pt;
     font-weight: 300;
     margin: 20vh 0 0 0;
 
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .fullpage-parallax {
+    right: -200px;
   }
 
 }

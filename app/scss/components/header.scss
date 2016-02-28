@@ -55,12 +55,34 @@ nav {
 
   }
 
+  &.reversed {
+
+    .container:before {
+      border-bottom: none !important;
+    }
+    .container:after {
+      border-bottom: none !important;
+    }
+    .container {
+      border-bottom: none !important;
+    }
+
+    background: #fefdfd !important;
+    color: black;
+    .button {
+      color: black;
+    }
+    .active .button {
+       color: $secondary-color !important;
+     }
+  }
+
   .active {
     color: $secondary-color;
   }
 
   i {
-    display: none;
+    display: none !important;
   }
 
 }
@@ -81,7 +103,9 @@ nav {
   }
 
   nav i {
-    display: block;
+    display: block !important;
+    height: 64px !important;
+    line-height: 64px !important;
   }
 
 }
