@@ -1,6 +1,6 @@
 .projects--title{
     position: relative;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 15px;
     font-size: 24pt;
@@ -12,7 +12,7 @@
 }
 
 @keyframes dropping-title{
-    from{top: -115px};
+    from{top: -78px};
     to{top: 0};
 }
 .projects--cards-wrapper{
