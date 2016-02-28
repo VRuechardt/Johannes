@@ -31,7 +31,7 @@ $fa-font-path: "../bower_components/components-font-awesome/fonts" !default;
 
 html, body {
   font-family: 'Open Sans';
-  background: black;
+  background: $primary-color-dark;
   font-size: 12pt;
   color: #ffffff;
 }
