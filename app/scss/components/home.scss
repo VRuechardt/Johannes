@@ -23,8 +23,10 @@ body:hover .fullpage-parallax {
   filter: grayscale(0%);
 }
 @media screen and (max-width: 600px) {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
+  body .fullpage-parallax {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
 }
 
 .fullpage-parallax-text {

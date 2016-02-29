@@ -131,3 +131,12 @@ nav {
   }
 
 }
+
+@media screen and (min-width: 600px) {
+
+  .small-span {
+    position: relative;
+    top: -5px;
+  }
+
+}
