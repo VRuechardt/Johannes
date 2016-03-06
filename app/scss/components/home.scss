@@ -14,7 +14,8 @@
 }
 
 body .fullpage-parallax {
-  transition: all 0.5s;
+  transition: filter 0.5s;
+  transition: -webkit-filter 0.5s;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
