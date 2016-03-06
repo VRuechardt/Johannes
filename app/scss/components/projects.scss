@@ -18,9 +18,11 @@
 }
 
 .projects--cards-wrapper{
-    margin-top: 8vw;
+    margin-top: 50px;
     .card{
         background: none;
+        display: none;
+        border: 1px solid darken($secondary-color, 30%);
     }
     .card-image{
         background: none;

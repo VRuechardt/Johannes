@@ -21,6 +21,7 @@
     "angular": "~1.4.7",
     "Materialize": "materialize#~0.97.2",
     "components-font-awesome": "~4.4.0",
-    "angular-materialize": "~0.1.2"
+    "angular-materialize": "~0.1.2",
+    "Swiper": "swiper#^3.3.1"
   }
 }
