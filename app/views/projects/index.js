@@ -4,7 +4,7 @@ angular.module('hansi.projects', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/projects', {
-            templateUrl: 'views/projects/projects.html',
+            templateUrl: 'dest/projects/projects.html',
             controller: 'ProjectsController'
         });
     }])

@@ -5,3 +5,4 @@
 app/dest
 node_modules
 app/bower_components
+app/index.html

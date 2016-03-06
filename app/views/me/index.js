@@ -4,7 +4,7 @@ angular.module('hansi.me', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/me', {
-            templateUrl: 'views/me/me.html',
+            templateUrl: 'dest/me/me.html',
             controller: 'MeController'
         });
     }])

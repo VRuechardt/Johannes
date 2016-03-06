@@ -4,7 +4,7 @@ angular.module('hansi.impressum', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/impressum', {
-            templateUrl: 'views/impressum/impressum.html',
+            templateUrl: 'dest/impressum/impressum.html',
             controller: 'ImpressumController'
         });
     }])
