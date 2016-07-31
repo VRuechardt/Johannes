@@ -15,13 +15,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $id = $_GET['id'];
 
         // GET one project
-        $res = mysqli_query($link, "SELECT hansi.projects.id, hansi.projects.title, hansi.projects.content, hansi.cover_images.id AS coverID, hansi.cover_images.path FROM hansi.projects, hansi.cover_images WHERE hansi.projects.id = hansi.cover_images.project AND hansi.projects.id = $id");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project AND projects.id = $id");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 
             $row->images = array();
 
-            $imgRes = mysqli_query($link, "SELECT * FROM hansi.images WHERE hansi.images.project = $row->id");
+            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id");
             while($imgRow = mysqli_fetch_object($imgRes)) {
                 array_push($row->images, $imgRow);
             }
@@ -36,13 +36,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     } else {
 
         // GET all projects
-        $res = mysqli_query($link, "SELECT hansi.projects.id, hansi.projects.title, hansi.projects.content, hansi.cover_images.id AS coverID, hansi.cover_images.path FROM hansi.projects, hansi.cover_images WHERE hansi.projects.id = hansi.cover_images.project ORDER BY index ASC");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project ORDER BY projects.index ASC");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 
             $row->images = array();
 
-            $imgRes = mysqli_query($link, "SELECT * FROM hansi.images WHERE hansi.images.project = $row->id");
+            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id");
             while($imgRow = mysqli_fetch_object($imgRes)) {
                 array_push($row->images, $imgRow);
             }

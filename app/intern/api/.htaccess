@@ -1,4 +1,4 @@
 AuthName "intern"
 AuthType Basic
-AuthUserFile /Users/Valentin/IdeaProjects/Hansi/app/intern/api/.htpasswd
+AuthUserFile	/is/htdocs/wp12556380_A8KOXTLYXS/www/intern/.htpasswd
 require valid-user

@@ -5,6 +5,7 @@ require('angular-route');
 
 require('./views/home');
 require('./views/projects');
+require('./views/project');
 require('./views/me');
 require('./views/impressum');
 require('./directives/footer');
@@ -13,6 +14,7 @@ angular.module('hansi', [
         'ngRoute',
         'hansi.home',
         'hansi.projects',
+        'hansi.project',
         'hansi.me',
         'hansi.impressum',
         'hansi.footer'

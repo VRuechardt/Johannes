@@ -8,7 +8,7 @@
 
 if(isset($_FILES['userfile']) && isset($_FILES['userfile']['name']) && isset($_FILES['userfile']['tmp_name'])) {
 
-    $uploaddir = '../../images/';
+    $uploaddir = '/is/htdocs/wp12556380_A8KOXTLYXS/www/images/';
     $fpath = time() . '.' . pathinfo(basename($_FILES['userfile']['name']))['extension'];
     $uploadfile = $uploaddir . $fpath;
     $userpath = '/images/' . $fpath;

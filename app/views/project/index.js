@@ -3,13 +3,13 @@
  */
 'use strict';
 
-angular.module('hansi.projects', ['ngRoute'])
+angular.module('hansi.project', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/projects', {
-            templateUrl: 'dest/projects/projects.html',
-            controller: 'ProjectsController'
+        $routeProvider.when('/project/:id', {
+            templateUrl: 'dest/project/project.html',
+            controller: 'ProjectController'
         });
     }])
 
-    .controller('ProjectsController', require('./projects.controller'));
+    .controller('ProjectController', require('./project.controller'));

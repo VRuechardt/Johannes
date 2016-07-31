@@ -39,7 +39,6 @@ module.exports = ['$scope', '$rootScope', '$timeout', '$http', '$location', func
         $('nav').toggleClass('filled', false);
     });
 
-    $scope.swiper;
 
     $timeout(function() {
 

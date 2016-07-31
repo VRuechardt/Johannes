@@ -9,6 +9,7 @@ module.exports = ['$scope', '$http', '$routeParams', '$timeout', function($scope
         .then(function(response) {
 
             $scope.project = response.data;
+            $scope.project.index *= 1;
             console.log(response);
 
         });

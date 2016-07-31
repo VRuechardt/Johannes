@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($obj->title && $obj->content && $obj->singleImage && count($obj->moreImages) > 0) {
 
-            mysqli_query($link, "INSERT INTO projects (title, content, index) VALUES ('$obj->title',' $obj->content', $obj->index)");
+            mysqli_query($link, "INSERT INTO projects (title, content, `index`) VALUES ('$obj->title','$obj->content', $obj->index)");
             $project = mysqli_insert_id($link);
 
             mysqli_query($link, "INSERT INTO cover_images (path, project) VALUES ('$obj->singleImage', $project)");
@@ -52,13 +52,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_GET['id'];
 
         // GET one project
-        $res = mysqli_query($link, "SELECT hansi.projects.id, hansi.projects.title, hansi.projects.content, hansi.projects.index, hansi.cover_images.id AS coverID, hansi.cover_images.path FROM hansi.projects, hansi.cover_images WHERE hansi.projects.id = hansi.cover_images.project AND hansi.projects.id = $id");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, projects.index, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project AND projects.id = $id");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 
             $row->images = array();
 
-            $imgRes = mysqli_query($link, "SELECT * FROM hansi.images WHERE hansi.images.project = $row->id");
+            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id");
             while($imgRow = mysqli_fetch_object($imgRes)) {
                 array_push($row->images, $imgRow);
             }
@@ -73,13 +73,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
 
         // GET all projects
-        $res = mysqli_query($link, "SELECT hansi.projects.id, hansi.projects.title, hansi.projects.content, hansi.projects.index, hansi.cover_images.id AS coverID, hansi.cover_images.path FROM hansi.projects, hansi.cover_images WHERE hansi.projects.id = hansi.cover_images.project ORDER BY index ASC");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, projects.index, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project ORDER BY projects.index ASC");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 
             $row->images = array();
 
-            $imgRes = mysqli_query($link, "SELECT * FROM hansi.images WHERE hansi.images.project = $row->id");
+            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id");
             while($imgRow = mysqli_fetch_object($imgRes)) {
                 array_push($row->images, $imgRow);
             }
@@ -104,7 +104,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if($obj->title && $obj->content && $obj->path && count($obj->images) > 0 && is_numeric($obj->id)) {
 
-            mysqli_query($link, "UPDATE projects SET title = '$obj->title', content = '$obj->content', index = $obj->index WHERE id = $obj->id");
+            mysqli_query($link, "UPDATE projects SET title = '$obj->title', content = '$obj->content', `index` = $obj->index WHERE id = $obj->id");
 
             mysqli_query($link, "DELETE FROM cover_images WHERE project = $obj->id");
             mysqli_query($link, "DELETE FROM images WHERE project = $obj->id");
