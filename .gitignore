@@ -6,3 +6,6 @@ app/dest
 node_modules
 app/bower_components
 app/index.html
+app/intern/node_modules
+app/intern/dest
+app/intern/bower_components

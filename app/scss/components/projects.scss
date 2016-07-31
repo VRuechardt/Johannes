@@ -17,12 +17,15 @@
     to{top: 0}
 }
 
-.projects--cards-wrapper{
+.projects--cards-wrapper {
+
+    .col:nth-child(2n) {
+        @extend .offset-l-1;
+    }
+
     margin-top: 50px;
-    .card{
+    .card {
         background: none;
-        display: none;
-        border: 1px solid darken($secondary-color, 30%);
     }
     .card-image{
         background: none;
@@ -31,4 +34,11 @@
         color: black;
         background-color:white;
     }
+
+}
+
+.projects--wrapper {
+
+    background-image: url('../img/bg.jpg');
+
 }

@@ -1,76 +1,97 @@
 
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <div class="projects--title">Projekte</div>
-            <div class="row projects--cards-wrapper">
+<div class="projects--wrapper">
 
-                <div class="col s12 m8 l5" ng-click="">
-                    <div class="card hoverable clickable" ng-click="projects()">
-                        <div class="card-image">
-                            <img alt="" src="img/Pfeffermühle_Kachel.jpg">
-                            <span class="card-title">Coming soon</span>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="projects--title">Projekte</div>
+
+                <div class="row projects--cards-wrapper">
+
+                    <div class="col s12 m6 l4" ng-repeat="project in projects track by $index">
+                        <div class="card hoverable clickable" ng-click="openProject(project)">
+                            <div class="card-image">
+                                <img alt="" ng-src="{{project.path}}">
+                                <span class="card-title">{{project.title}}</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="col s12 m8 l5 offset-l1" ng-click="">
-                    <div class="card hoverable clickable" ng-click="projects()">
-                        <div class="card-image">
-                            <img alt="" src="img/Woodstock_card_a.jpg">
-                            <span class="card-title">Coming soon</span>
+                <!--
+                <div class="row projects--cards-wrapper">
+
+                    <div class="col s12 m8 l5" ng-click="">
+                        <div class="card hoverable clickable" ng-click="projects()">
+                            <div class="card-image">
+                                <img alt="" src="img/Pfeffermühle_Kachel.jpg">
+                                <span class="card-title">Coming soon</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-            <div class="row projects--cards-wrapper">
-
-                <div class="col s12 m8 l5" ng-click="">
-                    <div class="card hoverable clickable" ng-click="projects()">
-                        <div class="card-image">
-                            <img alt="" src="img/CreamSupreme_1.jpg">
-                            <span class="card-title">Coming soon</span>
+                    <div class="col s12 m8 l5 offset-l1" ng-click="">
+                        <div class="card hoverable clickable" ng-click="projects()">
+                            <div class="card-image">
+                                <img alt="" src="img/Woodstock_card_a.jpg">
+                                <span class="card-title">Coming soon</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col s12 m8 l5 offset-l1" ng-click="">
-                    <div class="card hoverable clickable" ng-click="projects()">
-                        <div class="card-image">
-                            <div style="height: 298px; background: black;"></div>
-                            <span class="card-title">Coming soon</span>
+                </div>
+                <div class="row projects--cards-wrapper">
+
+                    <div class="col s12 m8 l5" ng-click="">
+                        <div class="card hoverable clickable" ng-click="projects()">
+                            <div class="card-image">
+                                <img alt="" src="img/CreamSupreme_1.jpg">
+                                <span class="card-title">Coming soon</span>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col s12 m8 l5 offset-l1" ng-click="">
+                        <div class="card hoverable clickable" ng-click="projects()">
+                            <div class="card-image">
+                                <div style="height: 298px; background: black;"></div>
+                                <span class="card-title">Coming soon</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                -->
+
 
             </div>
         </div>
     </div>
-</div>
 
-<footer-directive></footer-directive>
+    <footer-directive></footer-directive>
 
 
-<!--
-<div id="imageModal" class="modal">
-    <div class="modal-content">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" ng-repeat="slide in project.slides track by $index">
-                    <img ng-src="{{slide.src}}" alt="Kinderbuch">
+    <!--
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" ng-repeat="slide in project.slides track by $index">
+                        <img ng-src="{{slide.src}}" alt="Kinderbuch">
+                    </div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="modal-footer">
+            <h4>Modal Header</h4>
+            <p>
+                Penis
+            </p>
         </div>
     </div>
-    <div class="modal-footer">
-        <h4>Modal Header</h4>
-        <p>
-            Penis
-        </p>
-    </div>
+    -->
 </div>
--->

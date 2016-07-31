@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ['$scope', '$rootScope', '$timeout', function($scope, $rootScope, $timeout) {
+module.exports = ['$scope', '$rootScope', '$timeout', '$http', '$location', function($scope, $rootScope, $timeout, $http, $location) {
 
     $scope.projectList = [
         {
@@ -50,24 +50,16 @@ module.exports = ['$scope', '$rootScope', '$timeout', function($scope, $rootScop
     });
 
 
-    $scope.openProject = function(i) {
+    $scope.openProject = function(project) {
 
-        $scope.project = $scope.projectList[i];
-
-        $('#imageModal').openModal({
-            ready: function() {
-                $scope.swiper = new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination',
-                    slidesPerView: 1,
-                    paginationClickable: true,
-                    spaceBetween: 0,
-                    keyboardControl: true,
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
-                });
-            }
-        });
+        $location.path('/project/' + project.id);
 
     };
+
+    $http.get('api/project.php')
+        .then(function(response) {
+            console.log(response);
+            $scope.projects = response.data;
+        });
 
 }];
