@@ -20,7 +20,7 @@ body {
 }
 
 span.card-title {
-  font-size: 24pt !important;
+  font-size: 20pt !important;
 }
 .card-content p {
   font-size: 10pt !important;
@@ -28,4 +28,28 @@ span.card-title {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+a {
+  color: $secondary-color;
+}
+
+.card .card-image {
+
+  .card-subtitle {
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    font-size: 10pt;
+    max-width: 66%;
+  }
+
+  .card-subtitle ~ .card-title {
+    top: 0;
+    padding: 10px 20px;
+  }
+
 }

@@ -23,7 +23,7 @@
       margin: 0;
       height: 64px;
       line-height: 64px;
-      color: $type-on-black-secondary;
+      color: $type-on-white-secondary;
 
       span {
         display: inline-block;
@@ -31,7 +31,7 @@
       }
 
       span a {
-        color: $type-on-black-secondary;
+        color: $type-on-white-secondary;
         padding: 0 20px;
       }
 
@@ -43,7 +43,7 @@
       }
 
       .code-by {
-        color: $type-on-black-secondary;
+        color: $type-on-white-secondary;
         background: none !important;
       }
     }

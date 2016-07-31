@@ -1,7 +1,7 @@
 
 nav {
   background: none;
-  color: white;
+  color: $type-on-white-primary;
   position: fixed;
   left: 0;
   right: 0;
@@ -11,7 +11,18 @@ nav {
   transition: all 0.5s;
 
   &.dark {
-    background: $primary-color-dark;
+    background: $primary-color-dark !important;
+  }
+
+  &.filled {
+    background: white !important;
+    color: $type-on-white-primary !important;
+    a {
+      color: $type-on-white-primary !important;
+    }
+    p span.small-span {
+      color: $type-on-white-secondary;
+    }
   }
 
   p {
