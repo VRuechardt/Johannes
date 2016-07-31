@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12">
+
+            <h1>Hinterner Bereich</h1>
+
+        </div>
+
+        <div class="col s12 m6 l4" ng-repeat="project in projects track by $index">
+
+            <div class="card hoverable clickable">
+
+                <div class="card-image">
+                    <img ng-src="{{project.path}}">
+                    <span class="card-title" ng-click="showProject(project)">
+                        {{project.title}}
+                    </span>
+                    <i class="fa fa-trash" style="color: white; position: absolute; right: 0; top: 0; padding: 10px; font-size: 16pt; cursor: pointer;" ng-click="delete(project)"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

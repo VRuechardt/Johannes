@@ -1,0 +1,101 @@
+
+<div class="container">
+
+    <div class="row">
+
+        <form ng-submit="save()">
+
+            <div class="col s12">
+
+                <h1>Pojekt {{project.title}}</h1>
+
+            </div>
+
+            <div class="input-field col s12">
+
+                <input type="text" ng-model="project.title" id="title">
+                <label for="title">Name</label>
+
+            </div>
+
+            <div class="input-field col s12">
+
+                <input type="number" id="index" ng-model="project.index">
+                <label for="index">Position</label>
+
+            </div>
+
+            <div class="input-field col s12">
+
+                <textarea class="materialize-textarea" ng-model="project.content" id="content"></textarea>
+                <label for="content">Beschreibung</label>
+
+            </div>
+
+            <div class="col s12">
+                <h2>Kartenbild</h2>
+            </div>
+
+            <div class="col s12">
+
+                <div class="row">
+
+                    <div class="col s4">
+                        <img style="max-width: 100%;" ng-src="{{project.path}}">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="file-field input-field col s12">
+
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" accept="image/*" id="singleUploader">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+
+            </div>
+
+            <div class="col s12">
+                <h2>Weitere Bilder</h2>
+            </div>
+
+            <div class="col s12">
+
+                <div class="row">
+
+                    <div class="col s4" ng-repeat="img in project.images track by $index">
+                        <img style="max-width: 100%;" ng-src="{{img.path}}" ng-click="deleteImage($index)">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="file-field input-field col s12">
+
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" accept="image/*" id="multiUploader">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+
+            </div>
+
+            <div class="input-field col s12">
+                <div class="btn waves-effect waves-dark" ng-click="save()">
+                    Speichern
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

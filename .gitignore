@@ -8,4 +8,4 @@ app/bower_components
 app/index.html
 app/intern/node_modules
 app/intern/dest
-app/intern/bower_components
+app/intern/app/bower_components
