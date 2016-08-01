@@ -15,13 +15,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $id = $_GET['id'];
 
         // GET one project
-        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project AND projects.id = $id");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, projects.index, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project AND projects.id = $id");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 
             $row->images = array();
 
-            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id");
+            $imgRes = mysqli_query($link, "SELECT * FROM images WHERE images.project = $row->id ORDER BY id ASC");
             while($imgRow = mysqli_fetch_object($imgRes)) {
                 array_push($row->images, $imgRow);
             }
@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     } else {
 
         // GET all projects
-        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project ORDER BY projects.index ASC");
+        $res = mysqli_query($link, "SELECT projects.id, projects.title, projects.content, projects.index, cover_images.id AS coverID, cover_images.path FROM projects, cover_images WHERE projects.id = cover_images.project ORDER BY projects.index ASC");
         $response = array();
         while($row = mysqli_fetch_object($res)) {
 

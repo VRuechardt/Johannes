@@ -7,9 +7,16 @@
     font-weight: 300 !important;
     border-left: 0.5px solid $secondary-color;
     border-bottom: 0.5px solid $secondary-color;
-    width: 250px;
+    min-width: 250px;
     animation-name: dropping-title;
     animation-duration: 2s;
+    float: left;
+    padding-right: 40px;
+
+}
+
+.clear {
+    clear: both;
 }
 
 @keyframes dropping-title{
@@ -39,8 +46,81 @@
 
 .project--left {
 
+    &:first-child {
+        margin-top: 50px;
+    }
+
     img {
         width: 100%;
     }
 
+    hr {
+
+        border: none;
+        height: 0.5px;
+        background: $secondary-color;
+        margin: 30px 0;
+
+    }
+
+}
+
+.project--right {
+
+    margin-top: 50px;
+
+    h1 {
+        font-size: 20pt;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    p {
+        font-size: 10pt;
+        font-weight: 300;
+        margin: 20px 0 0 0;
+    }
+
+}
+
+@media #{$small-and-down} {
+
+    .project--right {
+
+        h1 {
+            margin: 20px 0;
+        }
+
+    }
+
+}
+
+.project--prev, .project--next {
+
+    position: absolute;
+    left: 0;
+    top: 40vh;
+    color: $secondary-color;
+    padding: 5px 15px 5px 10px;
+    font-size: 30pt;
+    border: 2px solid $secondary-color;
+    border-left: none;
+    border-radius: 3px;
+    line-height: 50px;
+    cursor: pointer;
+
+    &.disabled {
+        border-color: #BBB;
+        color: #BBB;
+        cursor: default;
+    }
+
+}
+
+.project--next {
+    left: initial;
+    right: 0;
+    padding: 5px 10px 5px 15px;
+    border-left: 2px solid $secondary-color;
+    border-right: none;
 }

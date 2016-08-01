@@ -19,8 +19,9 @@ angular.module('hansi', [
         'hansi.impressum',
         'hansi.footer'
     ])
-    .config(['$routeProvider', '$locationProvider', function($routeProvider) {
+    .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $routeProvider.otherwise({redirectTo: '/'});
+        $locationProvider.hashPrefix('!');
     }])
     .directive("showOnceBackgroundLoaded", [function () {
         return {

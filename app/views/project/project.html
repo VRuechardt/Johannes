@@ -9,20 +9,34 @@
                     | {{project.title}}
                 </div>
 
+                <div class="clear"></div>
+
             </div>
         </div>
 
         <div class="row">
 
-            <div class="col s12 m8 project--left">
+            <div class="col s12 m8 l9 project--left">
 
                 <img ng-src="{{project.images[0].path}}">
 
             </div>
 
-            <div class="col s12 m4 project--right">
+            <div class="col s12 m4 l3 project--right">
 
                 <h1>{{project.title}}</h1>
+
+                <p>
+                    {{project.content}}
+                </p>
+
+            </div>
+
+            <div class="col s12 m8 l9 project--left" ng-repeat="img in project.images track by $index" ng-if="$index > 0">
+
+                <hr>
+
+                <img ng-src="{{img.path}}">
 
             </div>
 
@@ -31,3 +45,17 @@
     </div>
 
 </div>
+
+<div class="project--prev" ng-class="{disabled: index < 1}" ng-click="prev()">
+
+    <i class="fa fa-chevron-left"></i>
+
+</div>
+
+<div class="project--next" ng-class="{disabled: index >= projects.length - 1}" ng-click="next()">
+
+    <i class="fa fa-chevron-right"></i>
+
+</div>
+
+<footer-directive></footer-directive>
